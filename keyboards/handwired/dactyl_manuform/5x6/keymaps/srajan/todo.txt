@@ -5,4 +5,8 @@
 	3.2. Cycle RGB modes
 	3.3. Brightness plus
 	3.4. Brightness minus
+	3.5. Hue plus
+	3.6. Hue minus
+	3.7. Sat plus
+	3.8. Sat minus
 4. Restrict animations to the useful ones
