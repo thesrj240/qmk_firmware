@@ -1,4 +1,4 @@
-1. Reset layer fix
+--------1. Reset layer fix 
 2. Layer based lighting - layer_state_t callback
 3. New keycodes for no eeprom versions for LED lights
 	3.1. LED Toggle
