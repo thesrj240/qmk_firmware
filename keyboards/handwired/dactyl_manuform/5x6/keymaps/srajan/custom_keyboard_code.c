@@ -1,27 +1,32 @@
 void keyboard_post_init_user(void) {
   // Call the post init code.
   rgblight_enable_noeeprom(); // enables Rgb, without saving settings
-  rgblight_sethsv_noeeprom(180, 255, 255); // sets the color to teal/cyan without saving
-  rgblight_mode_noeeprom(RGBLIGHT_MODE_BREATHING + 3); // sets mode to Fast breathing without saving
+  rgblight_sethsv_noeeprom(HSV_MAGENTA); // sets the color to teal/cyan without saving
+  rgblight_mode_noeeprom(RGBLIGHT_MODE_SNAKE); // sets mode to Fast breathing without saving
 }
 
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
-    case _RAISE:
-        rgblight_setrgb (0x00,  0x00, 0xFF); // use set hsv no eeprom version here
+    case 4:   // reset
+        rgblight_sethsv_noeeprom(HSV_RED);
+        rgblight_mode_noeeprom(RGBLIGHT_MODE_BREATHING + 3);
         break;
-    case _LOWER:
-        rgblight_setrgb (0xFF,  0x00, 0x00);
+    case 3:   // mouse
+        rgblight_sethsv_noeeprom(HSV_BLUE);
+        rgblight_mode_noeeprom(RGBLIGHT_MODE_SNAKE);
         break;
-    case _PLOVER:
-        rgblight_setrgb (0x00,  0xFF, 0x00);
+    case 2:   // nav
+        rgblight_sethsv_noeeprom(HSV_ORANGE);
+        rgblight_mode_noeeprom(RGBLIGHT_MODE_SNAKE);
         break;
-    case _ADJUST:
-        rgblight_setrgb (0x7A,  0x00, 0xFF);
+    case 1:   // symbols
+        rgblight_sethsv_noeeprom(HSV_PURPLE);
+        rgblight_mode_noeeprom(RGBLIGHT_MODE_SNAKE);
         break;
     default: //  for any other layers, or the default layer
-        rgblight_setrgb (0x00,  0xFF, 0xFF);
+        rgblight_sethsv_noeeprom(HSV_MAGENTA);
+        rgblight_mode_noeeprom(RGBLIGHT_MODE_SNAKE);
         break;
     }
   return state;
