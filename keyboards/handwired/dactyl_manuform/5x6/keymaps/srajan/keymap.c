@@ -92,6 +92,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 		case RGB_SAD:
 			if (record->event.pressed) {
 				rgblight_decrease_sat_noeeprom();
+			}
 			return false; // Skip all further processing of this key
 
 		case RGB_VAI:
