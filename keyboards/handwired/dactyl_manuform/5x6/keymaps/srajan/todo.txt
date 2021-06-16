@@ -9,4 +9,5 @@
 			3.6. Hue minus
 			3.7. Sat plus
 			3.8. Sat minus
-// 4. Restrict animations to the useful ones
+4. Restrict animations to the useful ones
+5. Enhance layer lighting logic by not defaulting to snake (using the get method)
