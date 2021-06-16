@@ -7,6 +7,8 @@ void keyboard_post_init_user(void) {
 
 
 layer_state_t layer_state_set_user(layer_state_t state) {
+  // enhance with logic of checking if RGB is enabled or not and handle accordingly
+  // see if mode needs to be set or not
     switch (get_highest_layer(state)) {
     case 4:   // reset
         rgblight_sethsv_noeeprom(HSV_RED);
