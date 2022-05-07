@@ -104,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_NAV] = LAYOUT(
   //,------------------------------------------------.                    ,---------------------------------------------------.
-  _______, _______, _______, _______, _______, _______,                   _______,  _______, _______, _______, _______, _______,
+  LCG_SWP, _______, _______, _______, _______, _______,                   _______,  _______, _______, _______, _______, _______,
   //|------+-------+--------+--------+--------+------|                   |--------+-------+--------+--------+--------+---------|
   _______, KC_INS,  KC_PSCR, KC_APP,  XXXXXXX, XXXXXXX,                    KC_CIRC, KC_HOME,KC_UP,   KC_END, KC_PSCR, KC_BSPC,
   //|------+-------+--------+--------+--------+------|                   |--------+-------+--------+--------+--------+---------|
@@ -297,7 +297,7 @@ static void print_logo_narrow(void) {
 static void print_status_narrow(void) {
     /* Print current mode */
     oled_set_cursor(0, 0);
-    if (keymap_config.swap_lctl_lgui) {
+    if (!keymap_config.swap_lctl_lgui) {
         oled_write_raw_P(mac_logo, sizeof(mac_logo));
     } else {
         oled_write_raw_P(windows_logo, sizeof(windows_logo));
