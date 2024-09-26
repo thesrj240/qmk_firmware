@@ -1,0 +1,13 @@
+--------1. Reset layer fix 
+--------2. Layer based lighting - layer_state_t callback
+--------3. New keycodes for no eeprom versions for LED lights
+			3.1. LED Toggle
+			3.2. Cycle RGB modes
+			3.3. Brightness plus
+			3.4. Brightness minus
+			3.5. Hue plus
+			3.6. Hue minus
+			3.7. Sat plus
+			3.8. Sat minus
+4. Restrict animations to the useful ones
+5. Enhance layer lighting logic by not defaulting to snake (using the get method)
